@@ -17,7 +17,7 @@ def word_substituter(tweet)
   dictionary.each do |key, value|
     array.map { |string| string.downcase == key.to_s ? string.replace(value) : string }
   end
-  array.join(" ") 
+  array.join(" ")
 end
 
 def bulk_tweet_shortener(tweets)
@@ -32,10 +32,10 @@ end
 
 def shortened_tweet_truncator(tweet)
   if tweet.length > 140
-    selective_tweet_shortener(tweet) 
-    tweet[0..136] << "..." 
+    selective_tweet_shortener(tweet)
+    tweet[0..136] << "..."
   else
     tweet
   end
-  
+
 end
