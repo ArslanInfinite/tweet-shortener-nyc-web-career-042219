@@ -13,7 +13,7 @@ def dictionary
 end
 
 def word_substituter(tweet)
-  array = tweet.split(| |)
+  array = tweet.split(/ /)
   dictionary.each do |key, value|
     array.map { |string| string.downcase == key.to_s ? string.replace(value) : string }
   end
